@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@450&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-900;
+  }
+
+  ::selection {
+    @apply bg-sky-500/30 text-white;
+  }
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-gray-50 to-sky-500 bg-clip-text text-transparent;
+}
+
+/* Smooth section transitions */
+section {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Improved scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-sky-500/50;
+}
